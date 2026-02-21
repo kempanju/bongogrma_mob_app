@@ -4,13 +4,19 @@ import 'package:chopper/chopper.dart';
 
 import 'package:flutter/foundation.dart';
 import 'package:habarisasa_flutter/api/user_api.dart';
+import 'package:habarisasa_flutter/api/user_blocked_api.dart';
+import 'package:habarisasa_flutter/api/user_gallery_api.dart';
+import 'package:habarisasa_flutter/api/user_status_api.dart';
+import 'package:habarisasa_flutter/api/post_api.dart';
 
 
 
 import '../domain/auth_dto.dart';
 import '../domain/user.dart';
 import 'auth_api.dart';
+import 'comment_api.dart';
 import 'error_converter.dart';
+import 'home_api.dart';
 import 'model_converter.dart';
 
 final JSONConverters = {
@@ -23,7 +29,13 @@ final JSONConverters = {
 
 final CollectAPIServices = [
   UserAPI.create(),
-  AuthAPI.create()
+  AuthAPI.create(),
+  UserBlockedAPI.create(),
+  UserGalleryAPI.create(),
+  UserStatusAPI.create(),
+  HomeAPI.create(),
+  PostAPI.create(),
+  CommentAPI.create(),
 ];
 
 
